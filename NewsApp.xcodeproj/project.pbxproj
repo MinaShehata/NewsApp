@@ -30,8 +30,19 @@
 		482458DA21DEA64F00342705 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458CE21DEA64F00342705 /* CustomImageView.swift */; };
 		482458DB21DEA64F00342705 /* UIVisualEffectViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458CF21DEA64F00342705 /* UIVisualEffectViewX.swift */; };
 		482458DC21DEA64F00342705 /* UISliderX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458D021DEA64F00342705 /* UISliderX.swift */; };
+		482458E021DEE4A600342705 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 482458DF21DEE4A600342705 /* Colors.xcassets */; };
+		482458EF21DEF77400342705 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458EE21DEF77400342705 /* UIColor+Extension.swift */; };
+		482458F221DEFE5000342705 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458F121DEFE5000342705 /* BaseNavigationController.swift */; };
+		482458F621DF094900342705 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458F521DF094900342705 /* UserInteractor.swift */; };
+		482458F821DF095A00342705 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458F721DF095A00342705 /* LoginPresenter.swift */; };
+		482458FB21DF09D000342705 /* NewsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 482458F921DF09D000342705 /* NewsApp.xcdatamodeld */; };
+		4824590021DF0BE300342705 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482458FF21DF0BE300342705 /* URLs.swift */; };
+		4824590321DF16B600342705 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4824590221DF16B600342705 /* UserDTO.swift */; };
+		4824590521DF176C00342705 /* LoginVC+LoginViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4824590421DF176C00342705 /* LoginVC+LoginViewDelegate.swift */; };
+		4824590A21DF1AED00342705 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4824590921DF1AED00342705 /* RegisterVC.swift */; };
+		4824590C21DF1B7A00342705 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4824590B21DF1B7A00342705 /* RegisterPresenter.swift */; };
 		484A0F5721DE7895003F2719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A0F5621DE7895003F2719 /* AppDelegate.swift */; };
-		484A0F5921DE7895003F2719 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A0F5821DE7895003F2719 /* LoadingVC.swift */; };
+		484A0F5921DE7895003F2719 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484A0F5821DE7895003F2719 /* LoginVC.swift */; };
 		484A0F5E21DE7896003F2719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484A0F5D21DE7896003F2719 /* Assets.xcassets */; };
 		484A0F6121DE7896003F2719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 484A0F5F21DE7896003F2719 /* LaunchScreen.storyboard */; };
 		9EC14FC0C6F2ECDD930AB044 /* Pods_NewsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDA6C6414B8E8BD3B19B3FF /* Pods_NewsApp.framework */; };
@@ -61,9 +72,20 @@
 		482458CE21DEA64F00342705 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		482458CF21DEA64F00342705 /* UIVisualEffectViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVisualEffectViewX.swift; sourceTree = "<group>"; };
 		482458D021DEA64F00342705 /* UISliderX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderX.swift; sourceTree = "<group>"; };
+		482458DF21DEE4A600342705 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		482458EE21DEF77400342705 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		482458F121DEFE5000342705 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		482458F521DF094900342705 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		482458F721DF095A00342705 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		482458FA21DF09D000342705 /* NewsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsApp.xcdatamodel; sourceTree = "<group>"; };
+		482458FF21DF0BE300342705 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		4824590221DF16B600342705 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		4824590421DF176C00342705 /* LoginVC+LoginViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+LoginViewDelegate.swift"; sourceTree = "<group>"; };
+		4824590921DF1AED00342705 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		4824590B21DF1B7A00342705 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		484A0F5321DE7895003F2719 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		484A0F5621DE7895003F2719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		484A0F5821DE7895003F2719 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		484A0F5821DE7895003F2719 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		484A0F5D21DE7896003F2719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		484A0F6021DE7896003F2719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		484A0F6221DE7896003F2719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +146,7 @@
 				482458B721DEA4CE00342705 /* ImagePickerController+Extension.swift */,
 				482458B821DEA4CE00342705 /* MSLoadingView.swift */,
 				482458B921DEA4CE00342705 /* CFAlert+Extension.swift */,
+				482458EE21DEF77400342705 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,8 +183,100 @@
 			children = (
 				484A0F5D21DE7896003F2719 /* Assets.xcassets */,
 				484A0F5F21DE7896003F2719 /* LaunchScreen.storyboard */,
+				482458DF21DEE4A600342705 /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		482458DE21DEB00500342705 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				482458F321DEFF0C00342705 /* Presenter */,
+				482458E221DEED6000342705 /* ViewConroller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		482458E221DEED6000342705 /* ViewConroller */ = {
+			isa = PBXGroup;
+			children = (
+				484A0F5821DE7895003F2719 /* LoginVC.swift */,
+				4824590421DF176C00342705 /* LoginVC+LoginViewDelegate.swift */,
+			);
+			path = ViewConroller;
+			sourceTree = "<group>";
+		};
+		482458F021DEFE2F00342705 /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				482458F121DEFE5000342705 /* BaseNavigationController.swift */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		482458F321DEFF0C00342705 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				482458F721DF095A00342705 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		482458F421DF093300342705 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				482458F521DF094900342705 /* UserInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		482458FD21DF0BCA00342705 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				484A0F5621DE7895003F2719 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		482458FE21DF0BD800342705 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				482458FF21DF0BE300342705 /* URLs.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4824590121DF16A800342705 /* DTO's */ = {
+			isa = PBXGroup;
+			children = (
+				4824590221DF16B600342705 /* UserDTO.swift */,
+			);
+			path = "DTO's";
+			sourceTree = "<group>";
+		};
+		4824590621DF193E00342705 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4824590821DF1AD800342705 /* ViewConroller */,
+				4824590721DF1ACA00342705 /* RegisterPresenter */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		4824590721DF1ACA00342705 /* RegisterPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				4824590B21DF1B7A00342705 /* RegisterPresenter.swift */,
+			);
+			path = RegisterPresenter;
+			sourceTree = "<group>";
+		};
+		4824590821DF1AD800342705 /* ViewConroller */ = {
+			isa = PBXGroup;
+			children = (
+				4824590921DF1AED00342705 /* RegisterVC.swift */,
+			);
+			path = ViewConroller;
 			sourceTree = "<group>";
 		};
 		484A0F4A21DE7895003F2719 = {
@@ -186,10 +301,16 @@
 		484A0F5521DE7895003F2719 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				484A0F5621DE7895003F2719 /* AppDelegate.swift */,
-				484A0F5821DE7895003F2719 /* LoadingVC.swift */,
+				482458DE21DEB00500342705 /* Login */,
+				482458F421DF093300342705 /* Interactor */,
+				4824590621DF193E00342705 /* Register */,
+				4824590121DF16A800342705 /* DTO's */,
+				482458FE21DF0BD800342705 /* API */,
+				482458FD21DF0BCA00342705 /* AppDelegate */,
+				482458F021DEFE2F00342705 /* BaseNavigationController */,
 				482458DD21DEA69F00342705 /* Resources */,
 				484A0F6221DE7896003F2719 /* Info.plist */,
+				482458F921DF09D000342705 /* NewsApp.xcdatamodeld */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -271,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				482458E021DEE4A600342705 /* Colors.xcassets in Resources */,
 				484A0F6121DE7896003F2719 /* LaunchScreen.storyboard in Resources */,
 				484A0F5E21DE7896003F2719 /* Assets.xcassets in Resources */,
 			);
@@ -312,6 +434,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsApp/Pods-NewsApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CFAlertViewController/CFAlertViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -320,6 +443,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CFAlertViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,28 +459,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				482458D421DEA64F00342705 /* UIButtonX.swift in Sources */,
+				482458F621DF094900342705 /* UserInteractor.swift in Sources */,
 				482458AD21DEA4B400342705 /* Connectivity.swift in Sources */,
 				482458DA21DEA64F00342705 /* CustomImageView.swift in Sources */,
 				482458A821DEA49B00342705 /* CoreDataStack.swift in Sources */,
 				482458BE21DEA4CE00342705 /* ImagePickerController+Extension.swift in Sources */,
 				482458D221DEA64F00342705 /* UITextFieldX.swift in Sources */,
 				482458BB21DEA4CE00342705 /* UIView+Extension.swift in Sources */,
-				484A0F5921DE7895003F2719 /* LoadingVC.swift in Sources */,
+				484A0F5921DE7895003F2719 /* LoginVC.swift in Sources */,
+				4824590021DF0BE300342705 /* URLs.swift in Sources */,
 				482458C321DEA4E300342705 /* BaseViewController.swift in Sources */,
 				482458B121DEA4C700342705 /* Transitioning.swift in Sources */,
 				482458D521DEA64F00342705 /* UILabelX.swift in Sources */,
 				482458AE21DEA4B400342705 /* NetworkLoader.swift in Sources */,
+				4824590321DF16B600342705 /* UserDTO.swift in Sources */,
 				482458BD21DEA4CE00342705 /* String+extension.swift in Sources */,
 				482458BC21DEA4CE00342705 /* UIKit+Extension.swift in Sources */,
 				482458DB21DEA64F00342705 /* UIVisualEffectViewX.swift in Sources */,
 				482458D921DEA64F00342705 /* UIViewX.swift in Sources */,
 				482458D121DEA64F00342705 /* UIViewXRadialGradient.swift in Sources */,
+				482458F821DF095A00342705 /* LoginPresenter.swift in Sources */,
 				484A0F5721DE7895003F2719 /* AppDelegate.swift in Sources */,
+				482458FB21DF09D000342705 /* NewsApp.xcdatamodeld in Sources */,
 				482458D721DEA64F00342705 /* UIViewControllerX.swift in Sources */,
 				482458C021DEA4CE00342705 /* CFAlert+Extension.swift in Sources */,
+				4824590521DF176C00342705 /* LoginVC+LoginViewDelegate.swift in Sources */,
 				482458D621DEA64F00342705 /* UIViewAnchorPoint.swift in Sources */,
 				482458DC21DEA64F00342705 /* UISliderX.swift in Sources */,
 				482458D821DEA64F00342705 /* UIImageViewX.swift in Sources */,
+				4824590A21DF1AED00342705 /* RegisterVC.swift in Sources */,
+				4824590C21DF1B7A00342705 /* RegisterPresenter.swift in Sources */,
+				482458F221DEFE5000342705 /* BaseNavigationController.swift in Sources */,
+				482458EF21DEF77400342705 /* UIColor+Extension.swift in Sources */,
 				482458D321DEA64F00342705 /* IndentLabel.swift in Sources */,
 				482458BF21DEA4CE00342705 /* MSLoadingView.swift in Sources */,
 			);
@@ -554,6 +688,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		482458F921DF09D000342705 /* NewsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				482458FA21DF09D000342705 /* NewsApp.xcdatamodel */,
+			);
+			currentVersion = 482458FA21DF09D000342705 /* NewsApp.xcdatamodel */;
+			path = NewsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 484A0F4B21DE7895003F2719 /* Project object */;
 }

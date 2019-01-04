@@ -10,7 +10,7 @@ import CoreData
 
 final class CoreDataStack {
     
-    static let shared = CoreDataStack(modelName: "IntermediateTrainingModel")
+    static let shared = CoreDataStack(modelName: "NewsApp")
     
     private let modelName: String
     private init(modelName: String) {

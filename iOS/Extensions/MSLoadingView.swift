@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol SpinnerView {
+    func ShowSpinner()
+    func HideSpinner()
+}
+
 class MSLoadingView: UIViewXRadialGradient {
 
     private let blackView: UIViewX = {
@@ -56,24 +61,28 @@ class MSLoadingView: UIViewXRadialGradient {
 extension UIViewController {
     
     public func StartLoading() {
-        showApplicationNetworkActivityIndicator()
-        guard let window = UIApplication.shared.keyWindow else { return }
-        let view = MSLoadingView(frame: window.frame)
-        window.addSubview(view)
-        view.activityIndicator.startAnimating()
-        Transition.transition(with: window)
+        DispatchQueue.main.async { [weak self] in
+            self?.showApplicationNetworkActivityIndicator()
+            guard let window = UIApplication.shared.keyWindow else { return }
+            let view = MSLoadingView(frame: window.frame)
+            window.addSubview(view)
+            view.activityIndicator.startAnimating()
+            Transition.transition(with: window)
+        }
     }
     
     public func StopLoading() {
-        guard let window = UIApplication.shared.keyWindow else { return }
-        hideApplicationNetworkActivityIndicator()
-        window.subviews.forEach {
-            if let msLoaderView = $0 as? MSLoadingView {
-                msLoaderView.activityIndicator.stopAnimating()
-                msLoaderView.removeFromSuperview()
+        DispatchQueue.main.async { [weak self] in
+            guard let window = UIApplication.shared.keyWindow else { return }
+            self?.hideApplicationNetworkActivityIndicator()
+            window.subviews.forEach {
+                if let msLoaderView = $0 as? MSLoadingView {
+                    msLoaderView.activityIndicator.stopAnimating()
+                    msLoaderView.removeFromSuperview()
+                }
             }
+            Transition.transition(with: window)
         }
-        Transition.transition(with: window)
     }
     
     // MARK: - Helpers
