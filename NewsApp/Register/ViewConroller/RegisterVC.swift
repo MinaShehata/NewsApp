@@ -112,11 +112,37 @@ class RegisterVC: BaseViewController {
         return button
     }()
     
-    //private var presenter: LoginPresenter!
+    
+    // back to login stuff.......
+    let accountLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Login with your account "
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
+    
+    lazy var backToLoginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitleColor(.orangeColor, for: .normal)
+        button.setTitle("Login", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        button.addTarget(self, action: #selector(backToLoginButtonPressed), for: .touchUpInside)
+        return button
+    }()
+    
+    lazy var stackView: UIStackView = {
+        let sv = UIStackView(arrangedSubviews: [accountLabel, backToLoginButton])
+        sv.axis = .horizontal
+        sv.alignment = .fill
+        return sv
+    }()
+    
+    private var presenter: RegisterPresenter!
     
     override func setup() {
         super.setup()
-        //presenter = LoginPresenter(view: self)
+        presenter = RegisterPresenter(view: self)
         setupUI()
         
     }
@@ -154,11 +180,30 @@ class RegisterVC: BaseViewController {
         view.addSubview(registerButton)
         registerButton.anchor(top: containerView.bottomAnchor, leading: containerView.leadingAnchor, bottom: nil, trailing: containerView.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: CGSize(width: 0, height: 44))
         
+        
+        view.addSubview(stackView)
+        stackView.anchor(top: nil, leading: nil, bottom: view.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 30, right: 0), size: CGSize(width: 0, height: 35))
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
     }
     
     @objc func registerButtonPressed(_ sender: UIButton) {
-        //let user = UserDTO(name: "", email: emailTextField.text!, password: passwordTextField.text!)
+        presenter.validateRegister(username: userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!) { [weak self](success, error) in
+            guard let self = self else { return }
+            if let error = error {
+                self.ErrorAlert(messaage: error)
+                return
+            }
+            if success {
+                let user = User(name: userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
+                presenter.register(user: user)
+            }
+        }
     }
     
-
+    @objc private func backToLoginButtonPressed() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 }

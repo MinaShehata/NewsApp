@@ -17,22 +17,67 @@ class BaseNavigationController: UINavigationController {
     }
     
     private func setupAppearance() {
+//        var font = UIFont.preferredFont(forTextStyle: .body).withSize(50)
+//        font = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
+//        navigationBar.prefersLargeTitles = true
+        navigationBar.shadowImage = UIImage()
+//        navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        let attributes =  [
+//            NSAttributedString.Key.foregroundColor: UIColor.white,
+//            .font : font
+//        ]
+//        navigationBar.titleTextAttributes = attributes
+//        navigationBar.largeTitleTextAttributes = attributes
+        navigationBar.tintColor = .white
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(50)
         font = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
-        UINavigationBar.appearance().prefersLargeTitles = true
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        let attributes =  [
+        navigationBar.barTintColor = .blueColor
+        navigationBar.prefersLargeTitles = true
+        navigationBar.isTranslucent = false
+        let largeAttributes =  [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             .font : font
         ]
-        UINavigationBar.appearance().titleTextAttributes = attributes
-        UINavigationBar.appearance().largeTitleTextAttributes = attributes
-        UINavigationBar.appearance().tintColor = .white
+        let smallAttributes =  [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            .font : UIFont.systemFont(ofSize: 25)
+        ]
+        navigationBar.largeTitleTextAttributes = largeAttributes
+        navigationBar.titleTextAttributes = smallAttributes
     }
     
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+}
+
+
+extension UIViewController {
+    func addRightBarButton(image: UIImage, with selector: Selector) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: selector)
+    }
+    
+    func addRightBarButton(title: String, selector: Selector) {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: self, action: selector)
+    }
+    
+    func addLeftBarButton(title: String, selector: Selector) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .plain, target: self, action: selector)
+    }
+    func addLeftBarButton(image: UIImage, selector: Selector) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: selector)
+    }
+    
+    @objc func handleCancel() {
+        dismiss(animated: true)
+    }
+    
+    func addLeftBarButtons(titles: [String], selector: [Selector]) {
+        var barButtons = [UIBarButtonItem]()
+        for (index, title) in titles.enumerated() {
+            barButtons.append(UIBarButtonItem(title: title, style: .plain, target: self, action: selector[index]))
+        }
+        navigationItem.leftBarButtonItems = barButtons
     }
 }

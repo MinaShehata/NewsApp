@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HNP-gk-j5H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Update NewsVC-->
+        <scene sceneID="eb4-hd-oB4">
+            <objects>
+                <viewController id="HNP-gk-j5H" customClass="AddUpdateNewsVC" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="diB-Qa-GWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vc0-cl-J6d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sy3-UI-SoV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bXj-Bf-2zS" appends="YES" id="Q4u-RH-2Dm"/>
+                                </connections>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-nr-APa" customClass="UIViewX" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="12" y="40" width="351" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evi-ho-hXE" customClass="UIButtonX" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="169" width="78" height="35"/>
+                                        <color key="backgroundColor" name="Blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="F6A-DD-SZv"/>
+                                            <constraint firstAttribute="width" constant="78" id="bBL-5K-SDO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.40000000000000002" height="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="HNP-gk-j5H" eventType="touchUpInside" id="55u-FE-Isc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULm-8M-osN" customClass="UIButtonX" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="257" y="169" width="78" height="35"/>
+                                        <color key="backgroundColor" name="Blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="L64-ad-H1o"/>
+                                            <constraint firstAttribute="width" constant="78" id="Scf-Ag-XRu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.40000000000000002" height="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="HNP-gk-j5H" eventType="touchUpInside" id="NJn-60-Uqd"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pav-jV-Xjc">
+                                        <rect key="frame" x="16" y="16" width="319" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yl9-Ez-6Gr" customClass="IQTextView" customModule="IQKeyboardManagerSwift">
+                                        <rect key="frame" x="16" y="54" width="319" height="107"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Enter description here"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" name="Orange"/>
+                                <constraints>
+                                    <constraint firstItem="Pav-jV-Xjc" firstAttribute="top" secondItem="guJ-nr-APa" secondAttribute="top" constant="16" id="4pj-nH-yA2"/>
+                                    <constraint firstItem="evi-ho-hXE" firstAttribute="leading" secondItem="guJ-nr-APa" secondAttribute="leading" constant="16" id="5MQ-qu-B44"/>
+                                    <constraint firstAttribute="trailing" secondItem="ULm-8M-osN" secondAttribute="trailing" constant="16" id="7r4-eN-pv0"/>
+                                    <constraint firstItem="yl9-Ez-6Gr" firstAttribute="trailing" secondItem="Pav-jV-Xjc" secondAttribute="trailing" id="C5t-iA-cCy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pav-jV-Xjc" secondAttribute="trailing" constant="16" id="EzH-vG-jxh"/>
+                                    <constraint firstItem="Pav-jV-Xjc" firstAttribute="leading" secondItem="guJ-nr-APa" secondAttribute="leading" constant="16" id="FzI-k1-8uf"/>
+                                    <constraint firstAttribute="bottom" secondItem="evi-ho-hXE" secondAttribute="bottom" constant="16" id="Jk9-PC-SmE"/>
+                                    <constraint firstItem="yl9-Ez-6Gr" firstAttribute="leading" secondItem="Pav-jV-Xjc" secondAttribute="leading" id="VM2-Xn-fGU"/>
+                                    <constraint firstAttribute="bottom" secondItem="ULm-8M-osN" secondAttribute="bottom" constant="16" id="ZdG-OK-lYb"/>
+                                    <constraint firstItem="yl9-Ez-6Gr" firstAttribute="top" secondItem="Pav-jV-Xjc" secondAttribute="bottom" constant="8" id="itQ-og-vC9"/>
+                                    <constraint firstAttribute="bottom" secondItem="yl9-Ez-6Gr" secondAttribute="bottom" constant="59" id="jIA-tO-0Fg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="yCz-QZ-dPE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.5" height="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="guJ-nr-APa" firstAttribute="top" secondItem="g42-iz-byU" secondAttribute="top" constant="20" id="1sO-LH-nwx"/>
+                            <constraint firstItem="g42-iz-byU" firstAttribute="trailing" secondItem="guJ-nr-APa" secondAttribute="trailing" constant="12" id="3Jv-fe-i0w"/>
+                            <constraint firstItem="Vc0-cl-J6d" firstAttribute="trailing" secondItem="diB-Qa-GWZ" secondAttribute="trailing" id="4p0-DV-9lc"/>
+                            <constraint firstItem="guJ-nr-APa" firstAttribute="leading" secondItem="g42-iz-byU" secondAttribute="leading" constant="12" id="6ZI-ck-Gc2"/>
+                            <constraint firstItem="Vc0-cl-J6d" firstAttribute="leading" secondItem="diB-Qa-GWZ" secondAttribute="leading" id="QIn-hL-Ph6"/>
+                            <constraint firstItem="Vc0-cl-J6d" firstAttribute="bottom" secondItem="diB-Qa-GWZ" secondAttribute="bottom" id="yIu-hu-Th8"/>
+                            <constraint firstItem="Vc0-cl-J6d" firstAttribute="top" secondItem="diB-Qa-GWZ" secondAttribute="top" id="zWy-Xn-Lqr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g42-iz-byU"/>
+                    </view>
+                    <connections>
+                        <outlet property="addUpdateButton" destination="ULm-8M-osN" id="FFP-We-oft"/>
+                        <outlet property="blurView" destination="Vc0-cl-J6d" id="PrQ-LH-yrh"/>
+                        <outlet property="descTextView" destination="yl9-Ez-6Gr" id="kEa-wo-Ic0"/>
+                        <outlet property="titleTextField" destination="Pav-jV-Xjc" id="SUK-bn-5XK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XH-ru-IT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bXj-Bf-2zS">
+                    <connections>
+                        <action selector="dismissVisualBlurView:" destination="HNP-gk-j5H" id="gdF-n3-kTf"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-572" y="-29.23538230884558"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.043137254901960784" green="0.1803921568627451" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Orange">
+            <color red="0.9882352941176471" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

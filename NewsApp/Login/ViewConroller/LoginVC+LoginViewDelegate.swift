@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mina Shehata. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension LoginVC: LoginView {
     func ShowSpinner() {
@@ -18,10 +18,19 @@ extension LoginVC: LoginView {
     }
     
     func LoginSuccess() {
-        print("User login successfully with token")
+        DispatchQueue.main.async {
+            self.loginButton.isEnabled = false
+            self.SuccessAlert (messaage: "Login Success", completion: {
+                Router.restartApp(window: UIApplication.shared.keyWindow!)
+            })
+        }
     }
     
     func LoginError(error: String) {
+        DispatchQueue.main.async {
+            self.loginButton.isEnabled = true
+            self.ErrorAlert(messaage: error, completion: nil)
+        }
         // show alert error
     }
     

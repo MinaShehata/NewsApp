@@ -38,6 +38,7 @@ public class BaseViewController: UIViewController {
             }
             else {
                 // error here.....
+                self.ErrorAlert(messaage: "Network offline", completion: nil)
             }
         }
     }
@@ -49,9 +50,7 @@ public class BaseViewController: UIViewController {
     
     private func removeLisner() {
         NotificationCenter.default.removeObserver(self, name: .StatusChanged, object: nil)
-        NetworkLoader.shared.requests.forEach {
-            $0.cancel()
-        }
+//        NetworkLoader.shared.requests.first
         print(NetworkLoader.shared.requests.count)
     }
     

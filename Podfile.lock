@@ -2,12 +2,14 @@ PODS:
   - Alamofire (4.7.3)
   - CFAlertViewController (3.1)
   - IQKeyboardManagerSwift (6.2.0)
+  - NoticeBar (0.1.7)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - CFAlertViewController
   - IQKeyboardManagerSwift
+  - NoticeBar
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -15,14 +17,16 @@ SPEC REPOS:
     - Alamofire
     - CFAlertViewController
     - IQKeyboardManagerSwift
+    - NoticeBar
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   CFAlertViewController: a27cf0512d0fa9ef6a3b966862039c295fb0ef69
   IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  NoticeBar: 7b824879ef70398a6ba2e01338e2d8bedb2c9d4e
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: beae8293608a32d92ee016d57f58b16882746454
+PODFILE CHECKSUM: 866704c2d276434a66c2c6febbe6c7b030ea6026
 
 COCOAPODS: 1.5.3

@@ -164,8 +164,19 @@ class LoginVC: BaseViewController {
     }
     
     @objc func loginButtonPressed(_ sender: UIButton) {
-        let user = UserDTO(name: "", email: emailTextField.text!, password: passwordTextField.text!)
-        presenter.login(user: user)
+        view.endEditing(true)
+        
+        presenter.validateLogin(email: emailTextField.text!, password: passwordTextField.text!) { [weak self](success, error) in
+            guard let self = self else { return }
+            if let error = error {
+                self.ErrorAlert(messaage: error)
+                return
+            }
+            if success {
+                let user = User(name: "", email: emailTextField.text!, password: passwordTextField.text!)
+                presenter.login(user: user)
+            }
+        }
     }
     
     

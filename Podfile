@@ -7,5 +7,6 @@ target 'NewsApp' do
   pod 'Alamofire'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'IQKeyboardManagerSwift'
+  pod 'NoticeBar'
   
 end
