@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 
 typealias fetchCompletion = (_ data: [NewsDTO]?, _ error: String?) -> ()
 typealias crudCompletion = (_ message: String?, _ error: String?) -> ()

@@ -9,10 +9,10 @@ import Foundation
 
 protocol AddUpdateNewsView: class, SpinnerView {
     
-    func addNewsSuccess(message: String)
+    func addNewsSuccess(message: String, news: NewsDTO)
     func errorAddNews(error: String)
     
-    func updateNewsSuccess(message: String)
+    func updateNewsSuccess(message: String, news: NewsDTO)
     func errorUpdateNews(error: String)
     
 }
@@ -26,6 +26,20 @@ class AddUpdateViewPresenter {
         self.view = view
     }
     
+    func validateInputs(title: String, desc: String, completion: @escaping (_ success: Bool, _ error: String?) -> ()) {
+        guard !title.isEmpty else {
+            completion(false, "Enter news title")
+            return
+        }
+        
+        guard !desc.isEmpty else {
+            completion(false, "Enter news desc")
+            return
+        }
+        
+        completion(true, nil)
+    }
+    
     func addNews(news: NewsDTO) {
         view?.ShowSpinner()
         newsInteractor.addNews(news: news) { [weak self] (message, error) in
@@ -35,7 +49,7 @@ class AddUpdateViewPresenter {
                 self.view?.errorAddNews(error: error)
             }
             if let message = message {
-                self.view?.addNewsSuccess(message: message)
+                self.view?.addNewsSuccess(message: message, news: news)
             }
         }
     }
@@ -49,7 +63,7 @@ class AddUpdateViewPresenter {
                 self.view?.errorUpdateNews(error: error)
             }
             if let message = message {
-                self.view?.updateNewsSuccess(message: message)
+                self.view?.updateNewsSuccess(message: message, news: news)
             }
         }
     }

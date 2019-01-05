@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 struct NewsVCConstants {
     static let ProfileVCSegue = "ProfileVCSegue"
@@ -73,6 +72,7 @@ class NewsVC: BaseViewController {
         if segue.identifier == NewsVCConstants.AddNewsVCSegue {
             if let vc = segue.destination as? AddUpdateNewsVC {
                 vc.news = sender as? NewsDTO
+                vc.delegate = self
             }
         }
     }

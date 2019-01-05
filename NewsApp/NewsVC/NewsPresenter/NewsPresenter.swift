@@ -73,5 +73,15 @@ class NewsPresenter {
     }
     
     
+    func addNews(news: NewsDTO) {
+        data.insert(news, at: 0)
+    }
+    
+    func updateNews(news: NewsDTO, newNews: NewsDTO) -> Int {
+        let index = data.index(of: news)
+        data.remove(at: index!)
+        data.insert(newNews, at: index!)
+        return index!
+    }
 }
 

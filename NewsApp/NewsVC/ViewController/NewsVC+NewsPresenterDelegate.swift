@@ -10,7 +10,6 @@ import Foundation
 
 extension NewsVC: NewsView {
     
-    
     func ShowSpinner() {
         StartLoading()
     }

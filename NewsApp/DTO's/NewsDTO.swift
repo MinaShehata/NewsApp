@@ -8,7 +8,7 @@
 
 import SwiftyJSON
 
-class NewsDTO: NSObject {
+class NewsDTO: NSObject, NSCopying {
     
     var id: Int?
     var title: String?
@@ -27,6 +27,13 @@ class NewsDTO: NSObject {
     }
     
     
+    func copy(with zone: NSZone? = nil) -> Any {
+        let editedNews = NewsDTO(id: self.id!, title: self.title!, desc: self.desc!)
+        editedNews.id = self.id
+        editedNews.title = self.title
+        editedNews.desc = self.desc
+        return editedNews
+    }
     
 }
 

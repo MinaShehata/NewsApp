@@ -17,17 +17,7 @@ class BaseNavigationController: UINavigationController {
     }
     
     private func setupAppearance() {
-//        var font = UIFont.preferredFont(forTextStyle: .body).withSize(50)
-//        font = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
-//        navigationBar.prefersLargeTitles = true
         navigationBar.shadowImage = UIImage()
-//        navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        let attributes =  [
-//            NSAttributedString.Key.foregroundColor: UIColor.white,
-//            .font : font
-//        ]
-//        navigationBar.titleTextAttributes = attributes
-//        navigationBar.largeTitleTextAttributes = attributes
         navigationBar.tintColor = .white
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(50)
         font = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
@@ -52,6 +42,13 @@ class BaseNavigationController: UINavigationController {
     }
 }
 
+class ProfileNavigationController: UINavigationController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+}
 
 extension UIViewController {
     func addRightBarButton(image: UIImage, with selector: Selector) {

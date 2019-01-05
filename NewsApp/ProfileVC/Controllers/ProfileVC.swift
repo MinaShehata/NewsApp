@@ -36,7 +36,9 @@ class ProfileVC: BaseViewController {
     @IBAction func logoutButton(_ sender: UIButtonX) {
         presenter?.logout()
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 

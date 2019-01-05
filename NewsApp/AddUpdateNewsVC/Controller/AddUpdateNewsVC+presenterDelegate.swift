@@ -18,9 +18,11 @@ extension AddUpdateNewsVC: AddUpdateNewsView {
         StopLoading()
     }
     
-    func addNewsSuccess(message: String) {
+    func addNewsSuccess(message: String, news: NewsDTO) {
         self.dismiss(animated: true) { [weak self] in
-            self?.SuccessAlert(messaage: message, completion: nil)
+            guard let self = self else { return }
+            self.SuccessAlert(messaage: message, completion: nil)
+            self.delegate?.didAddNews(news: news)
         }
     }
     
@@ -30,9 +32,14 @@ extension AddUpdateNewsVC: AddUpdateNewsView {
         }
     }
     
-    func updateNewsSuccess(message: String) {
+    func updateNewsSuccess(message: String, news: NewsDTO) {
         self.dismiss(animated: true) { [weak self] in
-            self?.SuccessAlert(messaage: message, completion: nil)
+            guard let self = self else { return }
+            self.SuccessAlert(messaage: message, completion: nil)
+            let editedNews = news.copy() as? NewsDTO
+            editedNews?.title = self.titleTextField.text!
+            editedNews?.desc = self.descTextView.text
+            self.delegate?.didUpdateNews(news: news, newNews: editedNews!)
         }
     }
     
